@@ -4,3 +4,4 @@ export { default as Filters } from './Filters';
 export { default as Manual } from './Manual';
 export { default as About } from './About';
 export { default as AuthCallback } from './AuthCallback';
+export { default as Donate } from './Donate';

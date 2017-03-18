@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueMaterial from 'vue-material';
 import App from './App';
-import { Home, Commands, Filters, Manual, About, AuthCallback } from './routes';
+import { Home, Commands, Filters, Manual, About, AuthCallback, Donate } from './routes';
 
 Vue.use(VueRouter);
 Vue.use(VueMaterial);
@@ -21,6 +21,7 @@ const router = new VueRouter({
     { path: '/manual', component: Manual },
     { path: '/about', component: About },
     { path: '/callback', component: AuthCallback },
+    { path: '/donate', component: Donate },
   ],
 });
 
