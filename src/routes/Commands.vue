@@ -57,6 +57,12 @@
 
           <icon-header icon="lock_open" tooltip="DJs/Bot Commanders/Song Requesters">{{prefix}}|</icon-header>
           See <router-link to="/filters">filters</router-link>.
+
+          <icon-header icon="lock_outline" tooltip="DJs/Bot Commanders">{{prefix}}freeze</icon-header>
+          Freezes the queue, putting it in read-only mode.
+
+          <icon-header icon="lock_outline" tooltip="DJs/Bot Commanders">{{prefix}}unfreeze</icon-header>
+          Unfreezes the queue.
         </md-tab>
         <md-tab id="image-commands" md-label="Image Commands" md-icon="photo">
           <icon-header icon="public" tooltip="Public">{{prefix}}seal</icon-header>

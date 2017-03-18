@@ -17,7 +17,7 @@
       <h4>Prerequisites</h4>
       <ul>
         <li><a href="https://nodejs.org/es/">Node.js v7+</a> (v6 will <b>not</b> work)</li>
-        <li><a href="https://www.rethinkdb.com/">RethinkDB</a></li>
+        <li><a href="https://redis.io/">Redis</a> (If you use Windows, you can download it <a href="https://github.com/MSOpenTech/redis/releases">here</a>)</li>
         <li><a href="https://ffmpeg.org/">FFMpeg</a></li>
         <li><a href="https://discordapp.com/developers/applications/me">A Discord bot token</a></li>
         <li><a href="https://github.com/FocaBot/FocaBot/blob/master/.env.example">Some API keys if you want the additional stuff</a></li>
@@ -42,7 +42,7 @@
       </ul>
       <h4>Running FocaBot</h4>
       <ul>
-        <li>Make sure RethinkDB is running before starting the bot</li>
+        <li>Make sure Redis is running before starting the bot (otherwise your data will not be saved)</li>
         <li>Run the <code>npm start</code> command in the bot's folder</li>
       </ul>
       FocaBot also includes a <code>process.yml</code> for use with PM2. If you use PM2, the bot will
@@ -90,7 +90,7 @@
         </li>
         <li>
           <b>allowTags</b> {yes/no} (default: <code>yes</code>)
-          <p>When disabled, the tag commands are restricted to people in the DJ role.</p>
+          <p>When disabled, the tag commands can't be used.</p>
         </li>
         <li>
           <b>greet</b> {text} (default: <code>off</code>)
@@ -112,12 +112,20 @@
         <li>
           <b>maxSongLength</b> {number} (default: <code>1800</code>)
           <p>Max allowed song length for non-DJs, in seconds.</p>
-          <p>Must be at least 60 seconds and not exceed 3600 seconds.</p>
+          <p>Must be at least 15 seconds and not exceed 21600 seconds (6 hours).</p>
         </li>
         <li>
           <b>dynamicNick</b> {yes/no} (default: <code>no</code>)
           <p>When enabled, the bot sets its nickname to the title of the song currently being played.</p>
-          <p>(this is a experimental feature)</p>
+        </li>
+        <li>
+          <b>allowImages</b> {yes/no} (default: <code>yes</code>)
+          <p>When disabled, no image commands can be used.</b>
+        </li>
+        <li>
+          <b>maxItems</b> {number} (default: <code>0</code>)
+          <p>Limites the maximum number of items the same user can have in the queue.</p>
+          <p>Setting it to 0 disables the limit. The limit doesn't apply to DJs or Bot Commanders.</p>
         </li>
       </ul>
 
@@ -134,7 +142,7 @@
       <h4>DJ</h4>
       <ul>
         <li>People with the <code>DJ</code> role.</li>
-        <li>Playlist requests limited to 2 hours in length</li>
+        <li>Playlist requests limited to 12 hours in length</li>
         <li>Instant skip</li>
         <li>Have full control over the playlist (move, swap, shuffle, remove, etc)</li>
         <li>Have access to some restricted filters and commands</li>
@@ -142,7 +150,7 @@
       <h4>Admin/Bot Commander</h4>
       <ul>
         <li>Server Owners and people with the <code>Bot Commander</code> or <code>Admin</code> roles.</li>
-        <li>Playlist requests limited to 12 hours in length</li>
+        <li>Playlist requests limited to 24 hours in length</li>
         <li>Have access to the <code>{{prefix}}config</code> command</li>
       </ul>
       <h4>Bot Owner</h4>

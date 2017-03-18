@@ -91,6 +91,11 @@
         {{prefix}}play Broke For Free - Night Owl | bass=10
       </filter-demo>
 
+      <icon-header icon="lock_outline" tooltip="DJs/Bot Commanders">| treble</icon-header>
+      <p>
+        Like <code>| bass</code>, but boosts the higher frequencies.
+      </p>
+
       <icon-header>| flanger</icon-header>
       <p>
         Flanger Effect. (trippy af if you use stereo headphones)
