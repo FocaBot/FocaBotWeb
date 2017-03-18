@@ -31,8 +31,14 @@
         <router-link tag="md-list-item" to="/manual">
           <md-icon>book</md-icon> <span>Manual</span>
         </router-link>
+        <router-link tag="md-list-item" to="/donate">
+          <md-icon>favorite</md-icon> <span>Donate</span>
+        </router-link>
         <md-list-item href="https://github.com/FocaBot/FocaBot/releases">
           <md-icon>history</md-icon> <span>Changelog</span>
+        </md-list-item>
+        <md-list-item href="https://discord.gg/V5drVUS">
+          <md-icon>feedback</md-icon> <span>Support Server</span>
         </md-list-item>
         <div class="md-divider"></div>
         <router-link tag="md-list-item" to="/about">
