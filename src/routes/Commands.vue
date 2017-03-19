@@ -11,6 +11,7 @@
           <br><code>{{prefix}}play Karma Fields - Edge of the world</code>
           <br><code>{{prefix}}play https://www.youtube.com/watch?v=7ZWU3d3iIBs</code>
           <br><code>{{prefix}}play Au5 - Freefall | speed=1.25</code> - see <router-link to="/filters">filters</router-link>.
+          <br><code>{{prefix}}play Feint - Snake Eyes @1:06</code> - Makes the video start at 1:06
 
           <icon-header icon="public" tooltip="Public">{{prefix}}queue</icon-header>
           Displays the entire music queue for the current server. If there are more than 10 elements,
