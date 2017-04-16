@@ -127,6 +127,20 @@
           <p>Limites the maximum number of items the same user can have in the queue.</p>
           <p>Setting it to 0 disables the limit. The limit doesn't apply to DJs or Bot Commanders.</p>
         </li>
+        <li>
+          <b>commandChannel</b> {#channel} (default: <code>*</code>)
+          <p>Limits usage of the bot to a single text channel. Admins bypass this.</p>
+          <p>Example:</p>
+          <pre><code>f'config commandChannel #bots</code></pre>
+          <p>Setting it to <code>*</code> disables the restriction.</p>
+        </li>
+        <li>
+          <b>voiceChannel</b> {channel name} (default: <code>*</code>)
+          <p>Limits usage of the bot to a single voice channel. Admins bypass this.</p>
+          <p>Example:</p>
+          <pre><code>f'config voiceChannel Music</code></pre>
+          <p>Setting it to <code>*</code> disables the restriction.</p>
+        </li>
       </ul>
 
       <h2 class="md-title" id="roles">Roles</h2>
@@ -240,7 +254,7 @@
       youtube-dl, just send me a DM and i'll update it as soon as possible.
       <br><br>
       If you are hosting the bot yourself, you can execute this command to update youtube-dl:
-      <pre><code>{{prefix}}exec npm uninstall youtube-dl && npm install youtube-dl</code></pre>
+      <pre><code>{{prefix}}exec npm uninstall ytdl-getinfo && npm install ytdl-getinfo</code></pre>
     </div>
   </div>
 </template>

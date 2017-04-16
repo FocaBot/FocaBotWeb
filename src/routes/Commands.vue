@@ -32,6 +32,9 @@
           <icon-header icon="lock_outline" tooltip="DJs/Bot Commanders">{{prefix}}resume</icon-header>
           Resumes playback.
 
+          <icon-header icon="lock_outline" tooltip="DJs/Bot Commanders">{{prefix}}volume {vol}</icon-header>
+          Changes the global volume.
+
           <icon-header icon="lock_open" tooltip="DJs/Bot Commanders/Song Requesters">{{prefix}}seek {position}</icon-header>
           Seeks to the specified position. Doesn't work with livestreams and songs with static filters.
 
