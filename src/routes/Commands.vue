@@ -104,6 +104,9 @@
           Sends a random image from the character previously defined using <code>{{prefix}}setWaifu</code>.
         </md-tab>
         <md-tab id="fun-commands" md-label="Fun Commands" md-icon="games">
+          <div class="md-caption">
+            Tags are not currently present in the public instance of FocaBot.
+          </div>
           <icon-header icon="public" tooltip="Public">{{prefix}}+ {tag} {response}</icon-header>
           Adds a new tag.<br><br>
 
