@@ -29,7 +29,7 @@ module.exports = {
     vendor: ['vuetify'],
     extend (config) {
       // Markdown loader
-      config.module.rules[0].options.loaders.md = 'markdownit-loader?breaks=true&html=true'
+      config.module.rules[0].options.loaders.md = 'markdownit-loader?html=true'
     }
   },
   plugins: ['~plugins/vuetify.js'],
