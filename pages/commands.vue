@@ -47,10 +47,10 @@ export default {
     simpleMarkdown(input) {
       if (!input) return ''
       return input
-      .replace(/\*\*(.*)\*\*/g, '<b>$1</b>')
-      .replace(/\*(.*)\*/g, '<i>$1</i>')
-      .replace(/`(.*)`/g, '<code>$1</code>')
-      .replace(/\[(.*)]\(.*\)/g, '<a target="_blank" href="$2">$1</a>')
+      .replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')
+      .replace(/\*(.+?)\*/g, '<i>$1</i>')
+      .replace(/`(.+?)`/g, '<code>$1</code>')
+      .replace(/\[(.+?)]\((.+?)\)/g, '<a target="_blank" href="$2">$1</a>')
       .replace(/$/gm, '<br>')
       .replace(/{{prefix}}/g, this.prefix)
     }
