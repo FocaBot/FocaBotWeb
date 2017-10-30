@@ -2,7 +2,7 @@
   <v-app dark toolbar footer>
     <v-navigation-drawer persistent enable-resize-watcher app v-model="drawer">
       <v-list>
-        <v-list-tile router v-for="(item, i) in items" :key="i" :to="item.to">
+        <v-list-tile ripple router v-for="(item, i) in items" :key="i" :to="item.to">
           <v-list-tile-action>
             <v-icon v-html="item.icon"></v-icon>
           </v-list-tile-action>

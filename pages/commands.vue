@@ -3,7 +3,7 @@
     <v-tabs @input="updateAccent" dark icons centered>
       <v-tabs-bar class="transparent">
         <v-tabs-slider :color="accent"></v-tabs-slider>
-        <v-tabs-item v-for="(section, i) in def" :key="i" :href="`#${i}`">
+        <v-tabs-item :ripple="{ class: `${section._color}--text` }" v-for="(section, i) in def" :key="i" :href="`#${i}`">
           <v-icon>{{section._icon}}</v-icon>
           <span class="hidden-xs-only">{{section._title}}</span>
         </v-tabs-item>
