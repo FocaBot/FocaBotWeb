@@ -5,7 +5,7 @@
         <v-tabs-slider :color="accent"></v-tabs-slider>
         <v-tabs-item v-for="(section, i) in def" :key="i" :href="`#${i}`">
           <v-icon>{{section._icon}}</v-icon>
-          {{section._title}}
+          <span class="hidden-xs-only">{{section._title}}</span>
         </v-tabs-item>
       </v-tabs-bar>
       <v-tabs-items>
