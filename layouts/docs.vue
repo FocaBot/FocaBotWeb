@@ -1,6 +1,6 @@
 <template>
   <v-app dark toolbar footer>
-    <v-navigation-drawer persistent app v-model="drawer">
+    <v-navigation-drawer persistent enable-resize-watcher app v-model="drawer">
       <v-list>
         <v-list-tile router v-for="(item, i) in items" :key="i" :to="item.to">
           <v-list-tile-action>
