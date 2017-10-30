@@ -1,0 +1,39 @@
+$theme := {
+  primary: #1e88e5
+  accent: #42A5F5
+  secondary: #424242
+  info: #0D47A1
+  warning: #ffb300
+  error: #B71C1C
+  success: #2E7D32
+}
+
+// Import Vuetify styling
+@require '~vuetify/src/stylus/main.styl'
+
+.page {
+  @extend .fade-transition
+}
+
+// Header Fixes
+h1, h2, h3, h4, h5 {
+  color: #eeeeee
+  font-weight: 100
+}
+
+// Markdown fixes
+code {
+  background: #212121
+  color: #CFD8DC
+}
+
+pre {
+  background: #212121
+  border: 1px solid #424242
+  padding: 1em
+  margin-bottom: 1em
+  border-radius: 5px
+  code::before, code::after {
+    display: none
+  }
+}

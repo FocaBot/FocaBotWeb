@@ -1,0 +1,301 @@
+# FocaBot commands definition file.
+# v1.0 (Elegant Erizo)
+music:
+  _title: Music Commands
+  _color: cyan
+  _icon: music_note
+  play:
+    args: [ link or title ]
+    aliases: [ p ]
+    description: |
+      Use this command while in a voice channel to request a song.
+      The command accepts both text searches and links. [List of supported sites](/faq#supported-sites).
+      You can also upload a music file as an attachment.
+    examples:
+      - \`{{prefix}}play Karma Fields - Edge of the world`
+      - \`{{prefix}}play https://www.youtube.com/watch?v=7ZWU3d3iIBs`
+      - \`{{prefix}}play Au5 - Freefall | speed=1.25` - see [filters](/filters).
+      - \`{{prefix}}play Feint - Snake Eyes @1:06` - Makes the video start at 1:06
+  search:
+    args: [ title ]
+    description: |
+      Displays the first 10 YouTube results from a search term, then adds the selected item to the queue.
+  queue:
+    args: [ (page=1) ]
+    aliases: [ q ]
+    description: >
+      Displays the entire music queue for the current guild.
+      If there are more than 10 elements, they'll be divided in pages.
+  np:
+    aliases: [ nowPlaying, n ]
+    description: Displays information about the currently playing song.
+  skip:
+    description: |
+      Votes to skip the currently playing song.
+      By default, a song is skipped when 40% of the people present in the voice channel runs this command.
+      If the song was initially requested by you, or you are a DJ/Bot Commander, this command will skip instantly without voting.
+      Use {{prefix}}voteskip if you want to force voting.
+  pause:
+    level: 2
+    description: Pauses playback.
+  resume:
+    level: 2
+    description: Resumes playback.
+  volume:
+    level: 2
+    args: [ vol ]
+    aliases: [ vol ]
+    description: Changes the global volume.
+  seek:
+    level: 1
+    args: [ time ]
+    aliases: [ s ]
+    description: >
+      Seeks to the specified position.
+      Doesn't work with livestreams and songs with static filters. 
+  shuffle:
+    level: 2
+    description: Shuffles the items in the queue.
+  clear:
+    level: 2
+    aliases: [ stop ]
+    descripion: Stops playback and clears the queue.
+  remove:
+    level: 1
+    aliases: [ rm ]
+    args: [ position ]
+    description: Removes the song at the specified position. 
+    examples:
+      - \`{{prefix}}remove 2`
+      - \`{{prefix}}remove 4-8` (removes all items from 4 to 8)
+  removeLast:
+    level: 1
+    aliases: [ rl, undo ]
+    description: Removes the last item from the queue.
+  swap:
+    level: 2
+    aliases: [ sp ]
+    args: [ pos1, pos2 ]
+    description: Swaps the position of 2 items in the queue.
+  move:
+    level: 2
+    aliases: [ mv ]
+    args: [ pos1, pos2 ]
+    description: Moves the item at `{pos1}` to `{pos2}`.
+  bump:
+    level: 2
+    args: [ pos ]
+    aliases: [ b ]
+    description: Moves the item at `{pos}` to the first position.
+  fx:
+    level: 1
+    aliases: ["|"]
+    description: See [filters](/filters)
+  freeze:
+    level: 2
+    description: Freezes the queue, putting it in read-only mode.
+  unfreeze:
+    level: 2
+    description: Unfreezes the queue.
+  sauce:
+    aliases: [ source, src ]
+    description: Sends a link to the video being played.
+  cancel:
+    level: 1
+    description: Cancels a pending playlist import.
+
+image:
+  _title: Image Commands
+  _color: light-green
+  _icon: photo
+  seal:
+    description: Sends seal pictures.
+  img:
+    args: [ query ]
+    description: Finds the first image marching the query.
+  imgur:
+    args: [ query ]
+    description: Searches in imgur and returns a random result.
+  gif:
+    args: [ query ]
+    description: Finds gifs using Giphy.
+  tumblr:
+    args: [ query ]
+    description: Finds a random image from tumblr matching the query.
+  danbooru:
+    args: [ tags ]
+    aliases: [ d ]
+    description: |
+      Finds a random image matching `{tags}` in danbooru.
+      If NSFW is disable, safebooru will be used instead.
+  safebooru:
+    args: [ tags ]
+    aliases: [ safe ]
+    description: Finds a random image matching `{tags}` in safebooru.
+  setWaifu:
+    args: [ tag ]
+    aliases: [ sw ]
+    description: >
+      "Bookmarks" a safebooru character tag.
+      After using this command, you can use `{{prefix}}waifu` to get a random image from such character.
+  waifu:
+    args: [ (tags) ]
+    aliases: [ w ]
+    description: |
+      Sends a random image from the character previously defined using `{{prefix}}setWaifu`.
+      You can optionally add additional tags to the query.
+
+fun:
+  _title: Fun Commands
+  _color: amber
+  _icon: games
+  _note: Tags are disabled by default and must be manually enabled using `{{prefix}}enable tags`.
+  "+":
+    args: [ tag, response ]
+    description: Adds a new tag.
+    examples:
+      - \`{{prefix}}+ hello hi`
+      - \`{{prefix}}+ seals are cute :3`
+  "-":
+    args: [ tag, (response) ]
+    description: Removes a tag added by yourself. Specify a response to remove only that response.
+    examples:
+      - \`{{prefix}}- hello`
+      - \`{{prefix}}- hello hi`
+  "!":
+    args: [ tag ]
+    description: |
+      Sends the response of a tag.
+      If the tag has multiple responses, a random one is chosen.
+    examples:
+      - \`{{prefix}}! hello`
+      - \`{{prefix}}! seals`
+  pray:
+    description: Praise the seal!
+  poll:
+    args: [ question, option1, option 2, (option3+) ]
+    argSeparator: "|"
+    description: Creates a "poll".
+    examples:
+      - \`{{prefix}}poll Is blue a color? | Yes | No`
+      - \`{{prefix}}poll Green tea or coffee? | Coffee | Green Tea | Both | Meh`
+  roll:
+    args: [ (max=100) ]
+    description:
+      Rolls a dice.
+    examples:
+      - \`{{prefix}}roll 10`
+      - \`{{prefix}}roll 3d10`
+  8ball:
+    args: [ (question) ]
+    description: The classic.
+  choose:
+    args: [ option1, option2, (option3+) ]
+    argSeparator: ";"
+    description: Picks a random element from the List.
+    examples:
+      - \`{{prefix}}choose Console Peasants ; PC Master Race`
+      - \`{{prefix}}choose Red ; Green ; Blue`
+  rate:
+    args: [ thing ]
+    description: Rate the specified thing.
+  raffleStart:
+    level: 3
+    description: Starts a new raffle.
+  raffleJoin:
+    description: Joins a raffle.
+  rafflePick:
+    level: 3
+    description: Picks a winner.
+  raffleClose:
+    level: 3
+    description: Ends a raffle.
+  raffleStats:
+    args: [ <@user> ]
+    description: Shows raffle statics for an user
+
+misc:
+  _title: Misc. Commands
+  _color: red
+  _icon: extension
+  help:
+    description: Shows the help message
+  filters:
+    description: Sends a link to the [filters](/filters) page.
+  ping:
+    description: Pong!
+  config:
+    level: 3
+    args: [ parameter, (value) ]
+    description: See [configuration](/configuration).
+  setNick:
+    level: 3
+    args: [ newNick ]
+    description: Changes the bot nickname.
+  clean:
+    level: 3
+    description: Deletes recent bot messages.
+  purge:
+    level: 3
+    args: [ n ]
+    description: Deletes the last `{n}` messages.
+  enable:
+    level: 3
+    args: [ module ]
+    description: Enables a module. See [configuration](/configuration).
+  disable:
+    level: 3
+    args: [ module ]
+    description: Enables a module. See [configuration](/configuration).
+  perm:
+    level: 3
+    args: [ command, (level) ]
+    description: Sets a custom permission level for a command. See [configuration](/configuration).
+  stats:
+    description: Show statics for the bot.
+  blacklist:
+    level: 5
+    args: [ <@user> ]
+    description: |
+      Globally blacklists an user from the bot. They'll not be able to use any command.
+      Be careful with this command, if you blacklist yourself, you'll need to add another owner to unblacklist you or delete the database.
+  unblacklist:
+    level: 5
+    args: [ <@user> ]
+    description: Removes a user from the blacklist.
+  restart:
+    level: 5
+    description: Restart the bot (only if you're using a process manager such as PM2)
+  update:
+    level: 5
+    description: |
+      Updates the bot and youtube-dl to their latest versions, then restarts the bot.
+      Only works if you've installed it from npm or have cloned the git repository.
+  setAvatar:
+    level: 5
+    description: Changes the bot's avatar. You must include the new avatar picture as an attachment.
+  setUsername:
+    level: 5
+    args: [ newUsername ]
+    description: Changes the bot account's username.
+  eval:
+    level: 5
+    args: [ code ]
+    description: |
+      Evaluates CoffeeScript code in the context of the bot.
+      The `p` function is available to print text to the chat and the `j` function formats JSON.
+      The current Azarasi instance is available as `Core`. You can also use the `await` keyword.
+    examples:
+      - \`{{prefix}}eval p('This text will be printed to chat.')`
+      - \`{{prefix}}eval j(Core.modules.loaded, 1)`
+      - \`{{prefix}}eval await msg.reply(msg.guild.name); msg.delete()`
+  jseval:
+    level: 5
+    args: [ code ]
+    description: |
+      Evaluates JavaScript code in the context of the bot.
+      The same functions and variables from `eval` are available. You can use the `await` keyword as well.
+  exec:
+    level: 5
+    args: [ cmd ]
+    description: Executes a shell command and returns the output.
