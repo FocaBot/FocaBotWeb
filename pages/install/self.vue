@@ -62,6 +62,7 @@ feedback, or just want to have a casual talk with me, feel free to come to the o
 <v-btn href="https://discord.gg/V5drVUS">Official Support Server</v-btn>
 
 Before asking any questions though, i'd appreciate if you read the FAQs first:
+
 <v-btn to="/faq">FAQ</v-btn>
 
 </template>
