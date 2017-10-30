@@ -16,7 +16,7 @@
             v-if="!commandName.match(/^_/)"
             :key="commandName"
             :prefix="prefix"
-            :color="accent"
+            :color="command.color || 'cyan'"
             :commandName="commandName"
             :commandMeta="command"
           ></command-definition>
