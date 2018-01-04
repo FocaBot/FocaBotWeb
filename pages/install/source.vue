@@ -73,6 +73,8 @@ cp .env.example .env
      - [Register a new OAuth app](https://www.tumblr.com/oauth/register)
      - Use `https://www.focabot.xyz/` as the website and callback URL.
      - Copy the OAuth consumer key and paste it into `TUMBLR_CONSUMER_KEY`. The secret key isn't used.
+   - `OSU_KEY`: Used for the f'osu command.
+     - Get it [here](https://osu.ppy.sh/p/api)
 
 #### Starting FocaBot
 

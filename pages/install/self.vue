@@ -45,15 +45,6 @@ Upon startup, it'll print an invite link so you can add it to your Discord serve
 > - FocaBot will keep running as long as you keep the terminal/cmd window open.
 > - If you want to run FocaBot in the background, please check [How do i make FocaBot run in the background/at startup?](/faq#how-do-i-make-focabot-run-in-the-background-at-startup)
 
-#### Limitations of this version
-
-The NPM package has some limitations:
-
- - Modules requiring external API keys are unavailable.
- - Sharding is also unavailable (at least for now), therefore you can only add the bot to a maximum of 2000 servers.
-
-If you want to avoid those limitations, consider [installing from source](/install/source).
-
 #### Getting Support
 
 If you find any difficulties while installing or running the bot, have questions,
