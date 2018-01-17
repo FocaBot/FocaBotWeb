@@ -56,6 +56,10 @@ music:
   shuffle:
     level: 2
     description: Shuffles the items in the queue.
+  loop:
+    level: 2
+    args: [ "single / all / off" ]
+    description: Enables or disables loop mode.
   clear:
     level: 2
     aliases: [ stop ]
@@ -103,7 +107,35 @@ music:
   cancel:
     level: 1
     description: Cancels a pending playlist import.
-
+  playlist save:
+    args: [ id ]
+    aliases: [ pl s ]
+    description: Saves the current queue as a playlist, identified by {id}
+  playlist load:
+    level: 2
+    args: [ id ]
+    aliases: [ pl l ]
+    description: Loads a previously saved playlist into the queue.
+  playlist update:
+    args: [ id ]
+    aliases: [ pl u ]
+    description: Updates a playlist with the current elements in queue.
+  playlist delete:
+    args: [ id ]
+    aliases: [ pl d ]
+    description: Deletes a playlist.
+  playlist collab add:
+    args: [ id, <@user> ]
+    aliases: [ pl c a, pl collab a ]
+    description: Adds collaborators to a playlist. They'll be able to update it with new elements.
+  playlist collab remove:
+    args: [ id, <@user> ]
+    aliases: [ pl c r, pl collab r ]
+    description: Removes collaborators from a playlist.
+  playlist owner:
+    args: [ id, <@user> ]
+    aliases: [ pl o ]
+    description: Transfers playlist ownership to another user. They'll be able to update and delete it.
 image:
   _title: Image Commands
   _color: light-green
