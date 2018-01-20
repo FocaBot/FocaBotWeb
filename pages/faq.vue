@@ -1,15 +1,15 @@
 <template lang="md">
 ## Frequently Asked Questions
 
- - [What are the DJ and Bot Commander roles?](#what-are-the-dj-and-bot-commander-roles)
- - [What are inline commands / How do i enable them?](#what-are-inline-commands-how-do-i-enable-them)
- - [What sites does FocaBot support?](#what-sites-does-focabot-support)
- - [How do i make FocaBot run in the background / at startup](#how-do-i-make-focabot-run-in-the-background-at-startup)
+ - [What are the DJ and Bot Commander roles?](#permission-levels)
+ - [What are inline commands / How do i enable them?](#inline-commands)
+ - [What sites does FocaBot support?](#supported-sites)
+ - [How do i make FocaBot run in the background / at startup](#run-in-background)
  - [Text search doesn't work, but links do / Links from X site don't work anymore.](#text-search-doesnt-work)
- - [The bot doesn't respond to my commands on some guilds](#the-bot-doesnt-respond-to-my-commands-on-some-guilds)
- - [The bot is stuck in the voice channel and doesn't play anything](#the-bot-is-stuck-in-the-voice-channel)
+ - [The bot doesn't respond to my commands on some guilds](#bot-doesnt-respond)
+ - [The bot is stuck in the voice channel and doesn't play anything](#stuck-in-voice-channel)
 
-<h4 id="what-are-the-dj-and-bot-commander-roles">What are the DJ and Bot Commander roles?</h4>
+<h4 id="permission-levels">What are the DJ and Bot Commander roles?</h4>
 
 FocaBot has 4 different permission levels, `User`, `DJ`, `Bot Commander`, and `Bot Owner`.
 
@@ -50,7 +50,7 @@ Here are the differences between permission levels:
  - Bypasses all limits
  - Access to administrative commands (restart the bot, run code, change the username, etc)
 
-<h4 id="what-are-inline-commands-how-do-i-enable-them">What are inline commands / How do i enable them?</h4>
+<h4 id="inline-commands">What are inline commands / How do i enable them?</h4>
 
 Inline commands allow you use commands inside a message, like this:
 
@@ -58,7 +58,7 @@ Inline commands allow you use commands inside a message, like this:
 
 To enable them, just run `f'enable inlineCommands`
 
-<h4 id="what-sites-does-focabot-support">What sites does FocaBot support?</h4>
+<h4 id="supported-sites">What sites does FocaBot support?</h4>
 
 Essentialy, FocaBot supports [most sites supported by youtube-dl](http://rg3.github.io/youtube-dl/supportedsites.html),
 but here's a list of sites that were oficially tested and should be expected
@@ -83,7 +83,7 @@ to work most of the time:
 Of course, you are welcome to try other sites. If you find another major site supported
 by FocaBot, you can contact me and i'll add it to the list. 
 
-<h4 id="how-do-i-make-focabot-run-in-the-background-at-startup">How do i make FocaBot run in the background / at startup</h4>
+<h4 id="run-in-background">How do i make FocaBot run in the background / at startup</h4>
 
 FocaBot only runs as long as you leave the terminal / cmd window open, but this
 can be a disadvantage if you're running it on your own computer or a server, where it's
@@ -120,17 +120,6 @@ pm2 save && pm2 startup
 
 Then follow the instructions.
 
-#### How do i update the bot?
-
-If you installed FocaBot with npm, simply run:
-
-```
-npm update -g focabot
-```
-
-If you installed from source, you can just `git pull` or manually replace the files
-with the newer version.
-
 <h4 id="text-search-doesnt-work">Text search doesn't work, but links do / Links from X site don't work anymore.</h4>
 
 Sometimes, [youtube-dl](https://github.com/rg3/youtube-dl) breaks, so it's pretty
@@ -145,7 +134,7 @@ as possible.
 
 If you're hosting the bot yourself, just run `f'update norestart` to update youtube-dl
 
-<h4 id="the-bot-doesnt-respond-to-my-commands-on-some-guilds">The bot doesn't respond to my commands on some guilds</h4>
+<h4 id="bot-doesnt-respond">The bot doesn't respond to my commands on some guilds</h4>
 
 First, make sure you're using the correct command prefix. Most self-hosted versions have
 a different command prefix than the default.
@@ -157,7 +146,7 @@ Third, make sure you have permission to run the command you're trying to use. Th
 fails silently if you don't have permission to use a command. Guild owners also have
 the option to restrict specific commands.
 
-<h4 id="the-bot-is-stuck-in-the-voice-channel">The bot is stuck in the voice channel and doesn't play anything</h4>
+<h4 id="stuck-in-voice-channel">The bot is stuck in the voice channel and doesn't play anything</h4>
 
 First, make sure the current song is not paused with `f'np`.
 If it's paused, ask a DJ to use the `f'resume`` command.

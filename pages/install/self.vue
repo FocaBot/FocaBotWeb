@@ -51,7 +51,7 @@ Upon startup, it'll print an invite link so you can add it to your Discord serve
 > - After the initial setup, you can change individual parameters by running `focabot config`
 > - You can also run the initial setup wizard again by running `focabot reconfigure`
 > - FocaBot will keep running as long as you keep the terminal/cmd window open.
-> - If you want to run FocaBot in the background, please check [How do i make FocaBot run in the background/at startup?](/faq#how-do-i-make-focabot-run-in-the-background-at-startup)
+> - If you want to run FocaBot in the background, please check [How do i make FocaBot run in the background/at startup?](/faq#run-in-background)
 
 #### Getting Support
 
