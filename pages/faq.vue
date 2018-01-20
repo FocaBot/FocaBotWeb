@@ -132,7 +132,7 @@ I don't have enough free time to constantly check if everything is ok,
 so if i forget to update youtube-dl, just send me a DM and i'll update it as soon
 as possible.
 
-If you're hosting the bot yourself, just run `f'update norestart` to update youtube-dl
+If you're hosting the bot yourself, just run `f'update ytdl` to update youtube-dl
 
 <h4 id="bot-doesnt-respond">The bot doesn't respond to my commands on some guilds</h4>
 
