@@ -92,19 +92,16 @@ https://discordapp.com/oauth2/authorize?scope=bot&permissions=57408&client_id=[Y
 
 >NOTES:
 > - FocaBot will keep running as long as you keep the terminal/cmd window open.
-> - A process.yml file is included for use with PM2. It enables sharding.
+> - Daemon config files are found inside the `daemon` directory, for use with multiple process managers (PM2, forever, etc)
 
 #### Getting Support
 
 If you find any difficulties while installing or running the bot, have questions,
-feedback, or just want to have a casual talk with me, feel free to come to the official support server.
+feedback, or just want to have a casual talk with me <s>(we love memes)</s>, feel free to join the
+[official support server](https://discord.gg/V5drVUS).
 
-<v-btn href="https://discord.gg/V5drVUS">Official Support Server</v-btn>
-
-Before asking any questions though, i'd appreciate if you read the FAQs first:
-
-<v-btn to="/faq">FAQ</v-btn>
-
+Before asking any questions though, i'd appreciate if you read the
+<nuxt-link to="/faq">FAQs</nuxt-link> first.
 </template>
 <script>
 export default {

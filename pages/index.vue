@@ -2,7 +2,7 @@
   <v-layout column justify-center align-center class="home">
     <v-flex xs12 sm8 md6>
       <div class="text-xs-center">
-        <img src="~assets/image/focabot_logo.png" class="logo" />
+        <img src="~/assets/image/focabot_logo.png" class="logo" />
       </div>
       <center>
         <h5>An easy to use music bot with advanced features!</h5>

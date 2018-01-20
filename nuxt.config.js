@@ -32,8 +32,8 @@ module.exports = {
       config.module.rules[0].options.loaders.md = 'markdownit-loader?html=true'
     }
   },
-  plugins: ['~plugins/vuetify.js'],
+  plugins: ['~/plugins/vuetify.js'],
   css: [
-    { src: '~assets/style/app.styl', lang: 'styl' }
+    { src: '~/assets/style/app.styl', lang: 'styl' }
   ]
 }

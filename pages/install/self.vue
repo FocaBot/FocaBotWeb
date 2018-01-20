@@ -16,6 +16,14 @@ so we're going to use that.
  - On Linux and macOS, python 2.7 is required (some distros don't include it by default)
  - At least 250MB of free disk space
 
+> **NOTE FOR VPS USERS**:
+> The most recent ffmpeg builds are incompatible with OpenVZ kernels.
+> If you install FocaBot inside an OpenVZ host, you'll find yourself unable to play YouTube livestreams.
+>
+> Since most VPS providers (especially cheap ones) use OpenVZ, take special care of choosing one that *doesn't* use it.
+>
+> I personally recommend [Vultr](https://www.vultr.com/?ref=7094752) and [DigitalOcean](https://m.do.co/c/87a81b97a078).
+
 #### Downloading FocaBot
 
 After installing Node.js, the `npm` command becomes available. To install FocaBot, open a Terminal (cmd on Windows) and run this command:
@@ -48,14 +56,11 @@ Upon startup, it'll print an invite link so you can add it to your Discord serve
 #### Getting Support
 
 If you find any difficulties while installing or running the bot, have questions,
-feedback, or just want to have a casual talk with me, feel free to come to the official support server.
+feedback, or just want to have a casual talk with me <s>(we love memes)</s>, feel free to join the
+[official support server](https://discord.gg/V5drVUS).
 
-<v-btn href="https://discord.gg/V5drVUS">Official Support Server</v-btn>
-
-Before asking any questions though, i'd appreciate if you read the FAQs first:
-
-<v-btn to="/faq">FAQ</v-btn>
-
+Before asking any questions though, i'd appreciate if you read the
+<nuxt-link to="/faq">FAQs</nuxt-link> first.
 </template>
 <script>
 export default {

@@ -45,7 +45,8 @@
           { icon: 'blur_on', title: 'Filters', to: '/filters' },
           { icon: 'build', title: 'Configuration', to: '/configuration' },
           { icon: 'question_answer', title: 'FAQ', to: '/faq' },
-          { icon: 'lightbulb_outline', title: 'Contribute', to: '/contribute' }
+          { icon: 'lightbulb_outline', title: 'Contribute', to: '/contribute' },
+          { icon: 'favorite', title: 'Donate', to: '/donate' }
         ],
         title: 'FocaBot Docs'
       }
