@@ -147,6 +147,15 @@ command.
   `f'config asyncPlaylists yes`
 </div>
 
+ - **inversePlaylist** {yes/no} (default: `no`)
+
+<div>
+  If enabled, the playback order will be reversed
+  (when a song ends, the most recently added song is played instead of the first one)
+
+  `f'config inversePlaylist yes`
+</div>
+
  - **allowWaifus** {yes/no} (default: `no`)
 
 <div>

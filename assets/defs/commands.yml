@@ -303,6 +303,11 @@ misc:
     description: |
       Updates the bot and youtube-dl to their latest versions, then restarts the bot.
       Only works if you've installed it from npm or have cloned the git repository.
+  announce:
+    level: 5
+    args: [ text ]
+    description: |
+      Makes a global announcement. The first line is the title and the following lines the body.
   setAvatar:
     level: 5
     description: Changes the bot's avatar. You must include the new avatar picture as an attachment.
