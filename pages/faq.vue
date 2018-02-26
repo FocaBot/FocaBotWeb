@@ -149,7 +149,7 @@ the option to restrict specific commands.
 <h4 id="stuck-in-voice-channel">The bot is stuck in the voice channel and doesn't play anything</h4>
 
 First, make sure the current song is not paused with `f'np`.
-If it's paused, ask a DJ to use the `f'resume`` command.
+If it's paused, ask a DJ to use the `f'resume` command.
 Vote Skipping also works on paused songs. 
 
  - If the current song appears as `playing`, but you don't hear anything:

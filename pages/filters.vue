@@ -2,7 +2,7 @@
 ## Filters
 
 
-(WIP, check the [legacy page](https://legacy.focabot.xyz/) for filter information in the meantime)
+(WIP, check the [legacy page](https://legacy.focabot.xyz/filters) for filter information in the meantime)
 
 </template>
 <script>
