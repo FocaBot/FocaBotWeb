@@ -16,13 +16,15 @@ so we're going to use that.
  - On Linux and macOS, python 2.7 is required (some distros don't include it by default)
  - At least 250MB of free disk space
 
-> **NOTE FOR VPS USERS**:
-> The most recent ffmpeg builds are incompatible with OpenVZ kernels.
-> If you install FocaBot inside an OpenVZ host, you'll find yourself unable to play YouTube livestreams.
+> **NOTE FOR LINUX USERS**:
 >
-> Since most VPS providers (especially cheap ones) use OpenVZ, take special care of choosing one that *doesn't* use it.
+> Don't use the root account to install and host the bot, aside from the
+> security aspect, FocaBot won't work properly if you install it as root
+> due to various permission issues. You should create an unprivileged user account.
 >
-> I personally recommend [Vultr](https://www.vultr.com/?ref=7094752) and [DigitalOcean](https://m.do.co/c/87a81b97a078).
+> If npm gives you an error when you run it without `sudo`,
+> use [this script](https://github.com/glenpike/npm-g_nosudo) to
+> configure it properly, or, alternatively, use nvm to manage your node installations.
 
 #### Downloading FocaBot
 
