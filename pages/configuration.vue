@@ -117,7 +117,7 @@ command.
  - **maxSongLength** {number} (default: `1800`)
 
 <div>
-  Maximum queue item length for non-DJ users, in seconds.
+  Maximum song length for non-DJ users, in seconds.
   Must be at least 60 seconds and not exceed 21600 seconds (6 hours)
 
   `f'config maxSongLength 3600`
@@ -130,6 +130,15 @@ command.
   Set it to 0 to disable this limit.
 
   `f'config maxItems 2`
+</div>
+
+ - **unrestrictedLivestreams** {yes/no} (default: `no`)
+
+<div>
+  By default, non-DJ users aren't allowed to play livestreams.
+  Set this to `yes` if you want them to bypass this restriction.
+
+  `f'config unrestrictedLivestreams yes`
 </div>
 
  - **asyncPlaylists** {yes/no} (default: `no`)
