@@ -11,10 +11,15 @@ so we're going to use that.
 
  - Linux / Windows 7+ / macOS
  - At least 512mb of RAM
- - [Node.js 8.x](https://nodejs.org/en/download/current/) or newer
+ - [Node.js 8.x](https://nodejs.org/en/download/) or newer
    - On Linux, it's recommended to use [nvm](https://github.com/creationix/nvm) to install Node.
  - On Linux and macOS, python 2.7 is required (some distros don't include it by default)
  - At least 250MB of free disk space
+
+> **NOTE FOR WINDOWS USERS**:
+>
+> Some Windows users have been reporting issues with the latest Node.js builds (10.x).
+> For now, use the LTS builds (8.x) if you're on Windows.
 
 > **NOTE FOR LINUX USERS**:
 >
