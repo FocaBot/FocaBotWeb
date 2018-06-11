@@ -28,7 +28,7 @@
       </v-container>
     </v-content>
     <v-footer app>
-      <span>&copy; 2017 thebit.link</span>
+      <span>&copy; 2018 thebit.link</span>
     </v-footer>
   </v-app>
 </template>
