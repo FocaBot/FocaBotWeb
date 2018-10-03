@@ -58,8 +58,10 @@ music:
     description: Shuffles the items in the queue.
   loop:
     level: 2
-    args: [ "single / all / off" ]
-    description: Enables or disables loop mode.
+    args: [ mode ]
+    description: >
+      Sets the loop mode.
+      Can be either `single`, `all` or `off`.
   clear:
     level: 2
     aliases: [ stop ]
